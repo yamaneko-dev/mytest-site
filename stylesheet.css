@@ -74,7 +74,7 @@ li{
 .spring::after{ background-image:url(images/spring.jpg); }
 .summer::after{ background-image:url(images/summer.jpg); }
 .autumn::after{ background-image:url(images/autumn.jpg); }
-.winter::after{ background-image:url(images/winter.avif); }
+.winter::after{ background-image:url(images/winter.jpg); }
 
 /* ホバーで写真フェードイン + 文字をわずかに浮かせる */
 .band:hover::after{
