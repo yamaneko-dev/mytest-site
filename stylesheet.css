@@ -67,7 +67,7 @@ li{
     background-position:center;
     opacity:0;
     transition: opacity var(--duration) ease;
-    z-index:-1;          /* 文字より背面 */
+    z-index:-1;          /* 文字より背面 
   }*/
 
   /* ① オーバーレイの背景をグラデーションに変更し、ぼかし感を演出 */
