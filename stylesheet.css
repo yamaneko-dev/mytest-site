@@ -28,3 +28,62 @@ li{
     background-color: #ceccf3;
     height: 270px;
 }
+
+:root{
+    --band-height: 25vh;      /* 4本で100%になる高さ */
+    --duration:   .5s;
+  }
+  
+  *{ box-sizing:border-box; margin:0; }
+  
+  body{
+    font-family: system-ui, sans-serif;
+    overflow-x:hidden;
+  }
+  
+  .band{
+    position: relative;
+    height: var(--band-height);
+    display: grid;
+    place-items: center;
+    color: #fff;
+    font-size: clamp(1.4rem, 4vw, 2.4rem);
+    font-weight: 700;
+    letter-spacing: .05em;
+    cursor: pointer;
+    /* 背景色（ホバー前） */
+  }
+  .spring{ background:#9dd57c; }
+  .summer{ background:#3fa9f5; }
+  .autumn{ background:#e79040; }
+  .winter{ background:#7e9ab8; }
+  
+  /* ===== 写真をフェード表示させる層 ===== */
+  .band::after{
+    content:'';
+    position:absolute;
+    inset:0;
+    background-size:cover;
+    background-position:center;
+    opacity:0;
+    transition: opacity var(--duration) ease;
+    z-index:-1;          /* 文字より背面 */
+  }
+  
+  /* 季節ごとの画像 URL を指定 */
+  .spring::after{ background-image:url(https://images.unsplash.com/photo-1557970877-760165e88bcd?auto=format&fit=crop&w=1200&q=80); }
+  .summer::after{ background-image:url(https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80); }
+  .autumn::after{ background-image:url(https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80); }
+  .winter::after{ background-image:url(https://images.unsplash.com/photo-1519682577862-22b62b24e493?auto=format&fit=crop&w=1200&q=80); }
+  
+  /* ホバーで写真フェードイン + 文字をわずかに浮かせる */
+  .band:hover::after{
+    opacity:1;
+  }
+  .band:hover{
+    transform: translateZ(0);         /* Safari GPU バグ対策 */
+  }
+  .band:hover h2{
+    transform: translateY(-4px);
+    transition: transform var(--duration) ease;
+  }  
