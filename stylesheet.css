@@ -21,10 +21,14 @@ li{
 }
 */
 
+nav{
+    height: 90px;
+}
+
 nav ul{
     display: table;
     margin: 0 auto;
-    padding: 0 ;
+    padding: 30px ;
     width: 80%;
     text-align: center;
 }
