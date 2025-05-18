@@ -28,7 +28,7 @@ nav{
 nav ul{
     display: table;
     margin: 0 auto;
-    padding: 30px;
+    padding: 20px 40px;
     width: 80%;
     text-align: center;
 }
@@ -58,7 +58,43 @@ nav li:hover{
     background-color: #bdf7f1;
     height: 600px;
 }
-  
+
+img {
+	margin: 0 auto;
+	max-width: 100%;
+
+.wrapper {
+	max-width: 80%;
+	margin: 0 auto 130px auto;
+	font-size: 0.9rem;
+	padding: 5% 10%;
+}
+
+/* セクションのスタイル */
+main {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 20px;
+}
+section {
+	width: 100%;
+	margin-bottom: 40px;
+	background-color: #ddd
+}
+section h2 {
+	font-size: 50px;
+	color: #333;
+	margin: 40px;
+	background-color: #fde4e4;
+	text-align: center;
+}
+section p {
+	font-size: 24px;
+	line-height: 1.6;
+	color: #666;
+	text-align: center;
+}
+
 .footer {
     background-color: #ceccf3;
     height: 270px;
