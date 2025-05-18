@@ -58,7 +58,7 @@ li{
   .autumn{ background:#e79040; }
   .winter{ background:#7e9ab8; }
   
-  /* ===== 写真をフェード表示させる層 ===== */
+  /* ===== 写真をフェード表示させる層 ===== 
   .band::after{
     content:'';
     position:absolute;
@@ -68,6 +68,44 @@ li{
     opacity:0;
     transition: opacity var(--duration) ease;
     z-index:-1;          /* 文字より背面 */
+  }*/
+
+  /* ① オーバーレイの背景をグラデーションに変更し、ぼかし感を演出 */
+.overlay {
+    position: fixed;
+    inset: 0;
+    /* ここを線形 → 放射状へ変更＋アルファ値を段階的に */
+    background: radial-gradient(circle at center,
+      rgba(0,0,0,.15) 0%,
+      rgba(0,0,0,.35) 60%,
+      rgba(0,0,0,.55) 100%);
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .4s ease;
+    backdrop-filter: blur(2px);   /* ぼかしで奥行きを追加（対応ブラウザのみ） */
+  }
+  
+  /* ② モーダル本体に拡大＆フェードのトランジション */
+  .modal {
+    background:#fff;
+    border-radius: 12px;
+    max-width: 460px;
+    width: 88%;
+    padding: 2rem;
+    position: relative;
+    box-shadow: 0 12px 32px rgba(0,0,0,.25);
+    opacity: 0;
+    transform: scale(.9);               /* 縮小スタート */
+    transition: opacity .35s ease,      /* フェード */
+                transform .35s ease;    /* 拡大 */
+  }
+  
+  /* ③ overlay が show になったときだけモーダルをアクティブに */
+  .overlay.show .modal{
+    opacity: 1;
+    transform: scale(1);
   }
   
   /* 季節ごとの画像 URL を指定 */
