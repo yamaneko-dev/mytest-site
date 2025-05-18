@@ -72,9 +72,9 @@ li{
 
   /* 季節ごとの画像 URL を指定 */
 .spring::after{ background-image:url(images/spring.jpg); }
-.summer::after{ background-image:url(https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80); }
-.autumn::after{ background-image:url(https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80); }
-.winter::after{ background-image:url(https://images.unsplash.com/photo-1519682577862-22b62b24e493?auto=format&fit=crop&w=1200&q=80); }
+.summer::after{ background-image:url(images/summer.jpg); }
+.autumn::after{ background-image:url(images/autumn.jpg); }
+.winter::after{ background-image:url(images/winter.avif); }
 
 /* ホバーで写真フェードイン + 文字をわずかに浮かせる */
 .band:hover::after{
