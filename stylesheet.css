@@ -1,10 +1,10 @@
 body {
-    font-family: "Avenir Next";
+    font-family: Helvetica, 游ゴシック, "Yu Gothic", YuGothic, HiraKakuProN-W3, メイリオ, Meiryo, sans-serif;
 }
 
 li{
     list-style: none;
-    float: left;
+    float: right;
     padding: 33px 20px;
 }
 
@@ -40,7 +40,7 @@ li{
     font-family: system-ui, sans-serif;
     overflow-x:hidden;
   }
-  
+
   .band{
     position: relative;
     height: var(--band-height);
