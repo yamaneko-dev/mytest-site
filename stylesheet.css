@@ -2,12 +2,7 @@ body {
     font-family: Helvetica, 游ゴシック, "Yu Gothic", YuGothic, HiraKakuProN-W3, メイリオ, Meiryo, sans-serif;
 }
 
-li{
-    list-style: none;
-    float: right;
-    padding: 33px 20px;
-}
-
+/*
 .header {
     background-color: #f7f2b4;
     height: 90px;
@@ -18,7 +13,43 @@ li{
     float:left;
     padding: 20px 40px;
 }
-  
+
+li{
+    list-style: none;
+    float: right;
+    padding: 33px 20px;
+}
+*/
+
+nav ul{
+    display: table;
+    margin: 0 auto;
+    padding: 0 ;
+    width: 80%;
+    text-align: center;
+}
+
+nav li{
+    display: table-cell;
+    min-width: 50px;
+}
+
+nav a{
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: #555;
+    padding-bottom: 5px;
+}
+    nav li.current{
+    border-bottom: 3px solid #92D050;
+}
+
+nav li:hover{
+    color: #E7DA66;
+    border-bottom: 3px solid #F0E475;
+}
+
 .main {
     background-color: #bdf7f1;
     height: 600px;
