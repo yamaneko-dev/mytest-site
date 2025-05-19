@@ -159,21 +159,21 @@ section p {
 
 /*ふわっと表示*/
 .panel::before{
-    content:'';
+    content:'background-image:url(images/mountain.jpg)';
     position:absolute;inset:0;
     background-image:var(--bg);
     background-size:cover;
     background-position:center;
-    transform:scale(1.4);
+    transform:scale(1.05);
     opacity:0;
-    transition:transform 1.6s ease,opacity 1.6s ease;
     z-index:-1;
 }
 
+/*
 .panel.inview::before{
     transform:scale(1.5);
     opacity:1;
-}
+}*/
   
 /* セクションごとの背景色（お好みで画像やグラデでもOK） ------ */
 .about{
@@ -216,16 +216,33 @@ html{scroll-behavior:smooth;}
 .autumn{ background:#e79040; }
 .winter{ background:#7e9ab8; }
   
-/* ===== 写真をフェード表示させる層 ===== */
+/* ===== 写真をフェード表示させる層OLD ===== 
 .band::after{
-    content:'';
+    content:'background-image:url(images/mountain.jpg)';
     position:absolute;
     inset:0;
     background-size:cover;
     background-position:center;
     opacity:0;
     transition: opacity var(--duration) ease;
-    z-index:-1;          /* 文字より背面 */
+    z-index:-1;          /* 文字より背面 
+}*/
+
+/* ▼ ★ 半透明オーバーレイ層 ★ ------------------------------- */
+.panel::after{
+    content:'';
+    position:absolute; inset:0;
+    background:rgba(0,0,0,.45);     /* ← 色と透過率を調整 */
+    backdrop-filter:blur(2px);      /* ぼかしを入れると更に読みやすい。不要なら削除 */
+    opacity:0;                      /* アニメ前は非表示 */
+    transition:opacity 1.6s ease;
+    z-index:-1;                     /* 写真より前・テキストより後ろ */
+}
+
+/* ▼ スクロールで背景がフェードインしたタイミングで
+      オーバーレイも同時に表示する例 ----------------------- */
+.panel.inview::after{
+    opacity:1;
 }
 
 /* 季節ごとの画像 URL を指定 */
