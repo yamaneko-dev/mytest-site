@@ -11,12 +11,15 @@ body{
     line-height: 1;
     font-size: 2rem;
 }
-/*
+
 .header {
-    background-color: #f7f2b4;
+    background-color: #e5a5db;
     height: 90px;
+    width: 100%;
+    padding: 20px 0;
 }
 
+/*
 .header-logo {
     font-size:36px;
     float:left;
@@ -67,7 +70,7 @@ nav li:hover{
 */
 
 .fixed-nav{
-    position:fixed;top:0;left:0;width:100%;
+    position:fixed;top:90px;left:0;width:100%;
     background:rgba(0,0,0,.6);
     z-index:999;
 }
