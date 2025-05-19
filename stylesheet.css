@@ -333,11 +333,11 @@ body{
 }
 
 /* パネル内文章 ----------------------------------- */
-div.sec-par{
+.panel div.sec-par{
     margin: 20px 0;
 }
 
-div.sec-par p{
+.panel div.sec-par p{
     font-size: 16px;
 }
 
