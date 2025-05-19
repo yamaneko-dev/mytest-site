@@ -340,6 +340,12 @@ body{
   z-index: 1;
 }
 
+.panel hr{
+  height: 1px;
+  width: 40%;
+  margin-top: 5px;
+}
+
 /* パネル内文章 ----------------------------------- */
 .sec-par{
   margin: 20px auto;
@@ -349,7 +355,14 @@ body{
   font-size: 16px;
 }
 
+/* パネル内テーブル ----------------------------------- */
+.sec-deta{
+    margin: 5px auto;
+    width: 30%;
+}
+
 /* ── 各セクションごとの背景写真を CSS 変数で指定 ─────────── */
 .about{--bg:url(images/mountain.jpg);}
 .works{--bg:url(images/work.jpg);}
+.work2{--bg:#cfd6dd;}
 .skill{--bg:url(images/skill.jpg);}
