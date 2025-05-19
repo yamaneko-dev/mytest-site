@@ -1,5 +1,9 @@
-body {
-    font-family: Helvetica, 游ゴシック, "Yu Gothic", YuGothic, HiraKakuProN-W3, メイリオ, Meiryo, sans-serif;
+/* 汎用設定 ------------------------------------------------------ */
+*{box-sizing:border-box;margin:0}
+body{
+  font-family:Helvetica, 游ゴシック, "Yu Gothic", YuGothic, HiraKakuProN-W3, メイリオ, Meiryo, sans-serif;
+  line-height:1.6;
+  color:#fff;
 }
 
 .s_title {
@@ -26,6 +30,7 @@ li{
 }
 */
 
+/*
 nav{
     height: 90px;
 }
@@ -59,9 +64,22 @@ nav li:hover{
     border-bottom: 3px solid #F0E475;
 }
 
+*/
+
+.fixed-nav{
+    position:fixed;top:0;left:0;width:100%;
+    background:rgba(0,0,0,.6);
+    z-index:999;
+}
+
+.fixed-nav ul{display:flex;gap:2rem;justify-content:center;padding:1rem 0;
+}
+
+.fixed-nav a{color:#fff;text-decoration:none;font-weight:600
+}
+
 .main {
     background-color: #bdf7f1;
-    height: 600px;
 }
 
 img {
@@ -69,6 +87,7 @@ img {
 	max-width: 100%;
 }
 
+/*
 .wrapper {
 	max-width: 80%;
 	margin: 0 auto 130px auto;
@@ -77,6 +96,7 @@ img {
 }
 
 /* セクションのスタイル */
+/*
 main {
 	max-width: 1000px;
 	margin: 0 auto;
@@ -100,23 +120,43 @@ section p {
 	color: #666;
 	text-align: center;
 }
+*/
 
 .footer {
     background-color: #ceccf3;
     height: 270px;
 }
 
-:root{
-    --band-height: 25vh;      /* 4本で100%になる高さ */
-    --duration:   .5s;
+/* 画面いっぱい幅・高さを好みで調整 --------------------------- */
+.panel{
+    width:100%;
+    min-height:100vh;          /* ★各セクションを「画面高いっぱい」に */
+    display:flex;
+    flex-direction:column;
+    justify-content:center;    /* 縦中央寄せ */
+    align-items:center;        /* 横中央寄せ */
+    padding:4rem 8vw;
+    text-align:center;
+  }
+  
+  /* セクションごとの背景色（お好みで画像やグラデでもOK） ------ */
+  .about {background:#4ab0c0;}
+  .works {background:#f5b946;}
+  .skill {background:#7e9ab8;}
+
+/* 見出し & 本文 --------------------------------------------- */
+.panel h2{
+    font-size:clamp(2rem,6vw,3.5rem);
+    margin-bottom:1rem;
+    letter-spacing:.08em;
+}
+.panel p{
+    font-size:clamp(1rem,3.2vw,1.5rem);
+    max-width:700px;
 }
   
-  *{ box-sizing:border-box; margin:0; }
-  
-body{
-    font-family: system-ui, sans-serif;
-    overflow-x:hidden;
-}
+/* optional : スクロール連続感を滑らかに ----------------------- */
+html{scroll-behavior:smooth;}
 
 .band{
     position: relative;
