@@ -2,6 +2,11 @@ body {
     font-family: Helvetica, 游ゴシック, "Yu Gothic", YuGothic, HiraKakuProN-W3, メイリオ, Meiryo, sans-serif;
 }
 
+s_title {
+    text-align: center;
+    line-height: 1px;
+    font-size: 1rem;
+}
 /*
 .header {
     background-color: #f7f2b4;
