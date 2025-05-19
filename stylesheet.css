@@ -2,10 +2,10 @@ body {
     font-family: Helvetica, 游ゴシック, "Yu Gothic", YuGothic, HiraKakuProN-W3, メイリオ, Meiryo, sans-serif;
 }
 
-s_title {
+.s_title {
     text-align: center;
-    line-height: 1px;
-    font-size: 1rem;
+    line-height: 1;
+    font-size: 2rem;
 }
 /*
 .header {
@@ -67,6 +67,7 @@ nav li:hover{
 img {
 	margin: 0 auto;
 	max-width: 100%;
+}
 
 .wrapper {
 	max-width: 80%;
@@ -108,16 +109,16 @@ section p {
 :root{
     --band-height: 25vh;      /* 4本で100%になる高さ */
     --duration:   .5s;
-  }
+}
   
   *{ box-sizing:border-box; margin:0; }
   
-  body{
+body{
     font-family: system-ui, sans-serif;
     overflow-x:hidden;
-  }
+}
 
-  .band{
+.band{
     position: relative;
     height: var(--band-height);
     display: grid;
@@ -128,14 +129,16 @@ section p {
     letter-spacing: .05em;
     cursor: pointer;
     /* 背景色（ホバー前） */
-  }
-  .spring{ background:#9dd57c; }
-  .summer{ background:#3fa9f5; }
-  .autumn{ background:#e79040; }
-  .winter{ background:#7e9ab8; }
+}
+
+
+.spring{ background:#9dd57c; }
+.summer{ background:#3fa9f5; }
+.autumn{ background:#e79040; }
+.winter{ background:#7e9ab8; }
   
-  /* ===== 写真をフェード表示させる層 ===== */
-  .band::after{
+/* ===== 写真をフェード表示させる層 ===== */
+.band::after{
     content:'';
     position:absolute;
     inset:0;
@@ -144,9 +147,9 @@ section p {
     opacity:0;
     transition: opacity var(--duration) ease;
     z-index:-1;          /* 文字より背面 */
-  }
+}
 
-  /* 季節ごとの画像 URL を指定 */
+/* 季節ごとの画像 URL を指定 */
 .spring::after{ background-image:url(images/spring.jpg); }
 .summer::after{ background-image:url(images/summer.jpg); }
 .autumn::after{ background-image:url(images/autumn.jpg); }
