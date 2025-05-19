@@ -14,8 +14,11 @@ body{
 .header {
     background-color: #e5a5db;
     height: 90px;
-    width: 100%;
     padding: 20px 0;
+    width: 100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
 /*
@@ -69,15 +72,25 @@ nav li:hover{
 */
 
 .fixed-nav{
-    position:fixed;top:90px;left:0;width:100%;
+    position:fixed;
+    top:90px;
+    left:0;
+    width:100%;
     background:rgba(0,0,0,.6);
     z-index:999;
 }
 
-.fixed-nav ul{display:flex;gap:2rem;justify-content:center;padding:1rem 0;
+.fixed-nav ul{
+    display:flex;
+    gap:2rem;
+    justify-content:center;
+    padding:0.5rem 0;
 }
 
-.fixed-nav a{color:#fff;text-decoration:none;font-weight:600
+.fixed-nav a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:600
 }
 
 .main {
