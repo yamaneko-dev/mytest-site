@@ -363,16 +363,12 @@ body{
 }
   
 /* 見出し & 備考 */
-.work-head{
-  margin-left:0; 
-  margin-right:0;
-  text-align:center;
-}
-
 .work-head,
 .work-note{
+  text-align:center;
   color:#fff;
-  margin: .5rem 0 1rem;
+  margin: .5rem auto 1rem;
+  font-size: 16px;
 }
   
 /* ===== 画像アニメーション部分 ===== */
