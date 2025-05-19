@@ -357,41 +357,43 @@ body{
 
 /* Workパネル ----------------------------------- */
 .work-card{
-    display:flex; 
-    flex-direction:column;
-    align-items:center; 
-    text-align: center;
-    max-width: 480px;
-    margin: 0 auto;
-  }
+  text-align: center;
+  max-width: 480px;
+  margin: 0 auto;
+}
   
-  /* 見出し & 備考 */
-  .work-head,
-  .work-note{
-    color:#fff;
-    margin: .5rem 0 1rem;
-  }
+/* 見出し & 備考 */
+.work-head{
+  margin-left:0; 
+  margin-right:0;
+  text-align:center;
+}
+
+.work-head,
+.work-note{
+  color:#fff;
+  margin: .5rem 0 1rem;
+}
   
-  /* ===== 画像アニメーション部分 ===== */
-  .work-link{
-    display: block;
-    overflow: hidden; 
-    border-radius: 12px;
-  }
+/* ===== 画像アニメーション部分 ===== */
+.work-link{
+  display: block;
+  overflow: hidden; 
+  border-radius: 12px;
+}
   
-  .work-link img{
-    width: 100%;
-    border-radius: inherit;
-    transition: transform 0.8s ease;
-  }
+.work-link img{
+  width: 100%;
+  border-radius: inherit;
+  transition: transform 0.8s ease;
+}
   
-  /* ── ホバー時の動き ────────────────── */
-  .work-link:hover img{
-    transform: scale(1.05) translateY(-6px);
-  }
+/* ── ホバー時の動き ────────────────── */
+.work-link:hover img{
+  transform: scale(1.05) translateY(-6px);
+}
 
 /* ── 各セクションごとの背景写真を CSS 変数で指定 ─────────── */
 .about{--bg:url(images/mountain.jpg);}
 .works{--bg:url(images/work.jpg);}
-.work2{--bg:#e8ecf1f6;}
 .skill{--bg:url(images/skill.jpg);}
