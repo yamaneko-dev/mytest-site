@@ -246,99 +246,107 @@ html{scroll-behavior:smooth;}
 */
 
 /* ── 共通設定 ─────────────────────── */
-*{box-sizing:border-box;margin:0}
+*{box-sizing: border-box;margin:0}
+
 body{
-  font-family:Helvetica, 游ゴシック, "Yu Gothic", YuGothic, HiraKakuProN-W3, メイリオ, Meiryo, sans-serif;
-  line-height:1.6;
+  font-family: Helvetica, 游ゴシック, "Yu Gothic", YuGothic, HiraKakuProN-W3, メイリオ, Meiryo, sans-serif;
+  line-height: 1.6;
   color:#fff;
 }
 .header{
   background:#e5a5db;
-  height:90px;
-  padding:20px 0;
+  height: 90px;
+  padding: 20px 0;
   width: 100%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
 .s_title {
-    text-align: center;
-    font-size: 2rem;
+  text-align: center;
+  font-size: 35px;
 }
 
 .fixed-nav{
-    position:fixed;
-    top:90px;
-    left:0;
-    width:100%;
-    background:rgba(0,0,0,.6);
-    z-index:999;
+  position: fixed;
+  top: 90px;
+  left: 0;
+  width: 100%;
+  background:rgba(0,0,0,.6);
+  z-index: 999;
 }
 
 .fixed-nav ul{
-    display:flex;
-    gap:2rem;
-    justify-content:center;
-    padding:0.5rem 0;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  padding: 0.5rem 0;
 }
 
 .fixed-nav a{
-    color:#fff;
-    text-decoration:none;
-    font-weight:600
+  color:#fff;
+  text-decoration: none;
+  font-weight: 600;
 }
 
 /* ── パネル（About / Works / Skill）──────────────── */
 .panel{
-  position:relative;                 /* ← 疑似要素の基準 */
-  width:100%; min-height:100vh;
-  padding:4rem 8vw;
-  display:flex;flex-direction:column;
-  justify-content:center;align-items:center;
-  text-align:center;
-  overflow:hidden;                   /* 背景はみ出し防止 */
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 4rem 8vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
 }
 
 /* 背景写真層  -------------------------------------------------- */
 .panel::before{
-  content:'';
-  position:absolute; inset:0;
-  background-image:var(--bg);        /* 各セクションで上書き */
-  background-size:cover;
-  background-position:center;
-  z-index:-2;                        /* 最背面 */
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--bg);
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
 }
 
 /* 半透明オーバーレイ層  --------------------------------------- */
 .panel::after{
-  content:'';
-  position:absolute; inset:0;
-  background:rgba(0,0,0,.45);        /* ← 好みで色・濃さ変更 */
-  /* backdrop-filter:blur(2px); */   /* ぼかし要らなければ削除 */
-  z-index:-1;                        /* 写真より前・文字より後ろ */
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:rgba(0,0,0,.5);
+  z-index: -1;
 }
 
 /* 見出し・タイトル ----------------------------------- */
 .panel h2{
-  font-size:clamp(2rem,6vw,3.5rem);
-  margin-bottom:1rem;letter-spacing:.08em;
-  position:relative; z-index:1;      /* 念のため最前面 */
+  /*font-size:clamp(2rem,6vw,3.5rem);*/
+  font-size: 28px;
+  margin-bottom: 0.5rem;
+  letter-spacing: .08em;
+  position: relative;
+  z-index: 1;
 }
 .panel p{
   /*font-size:clamp(1rem,3.2vw,1.5rem);*/
-  font-size:20px;
-  max-width:700px;
-  position:relative; z-index:1;
+  font-size: 20px;
+  max-width: 700px;
+  position: relative;
+  z-index: 1;
 }
 
 /* パネル内文章 ----------------------------------- */
 .sec-par{
-    margin:20px auto;
+  margin: 20px auto;
 }
 
 .sec-par p{
-    font-size:16px;
+  font-size: 16px;
 }
 
 /* ── 各セクションごとの背景写真を CSS 変数で指定 ─────────── */
