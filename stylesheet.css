@@ -1,4 +1,5 @@
-/* 汎用設定 ------------------------------------------------------ */
+/*
+/* 汎用設定 ------------------------------------------------------ 
 *{box-sizing:border-box;margin:0}
 body{
   font-family:Helvetica, 游ゴシック, "Yu Gothic", YuGothic, HiraKakuProN-W3, メイリオ, Meiryo, sans-serif;
@@ -69,8 +70,6 @@ nav li:hover{
     border-bottom: 3px solid #F0E475;
 }
 
-*/
-
 .fixed-nav{
     position:fixed;
     top:90px;
@@ -135,38 +134,37 @@ section p {
 	color: #666;
 	text-align: center;
 }
-*/
+
 
 .footer {
     background-color: #ceccf3;
     height: 270px;
 }
 
-/* 画面いっぱい幅・高さを好みで調整 --------------------------- */
+/* 画面いっぱい幅・高さを好みで調整 --------------------------- 
 .panel{
     width:100%;
-    min-height:100vh;          /* ★各セクションを「画面高いっぱい」に */
+    min-height:100vh;          /* ★各セクションを「画面高いっぱい」に 
     display:flex;
     flex-direction:column;
-    justify-content:center;    /* 縦中央寄せ */
-    align-items:center;        /* 横中央寄せ */
+    justify-content:center;    /* 縦中央寄せ 
+    align-items:center;        /* 横中央寄せ 
     padding:4rem 8vw;
     text-align:center;
-    position:relative; /* 追加 */
-    overflow:hidden; /* 追加 */
+    position:relative; /* 追加 
+    overflow:hidden; /* 追加 
 
 }
 
-/*ふわっと表示*/
+/* ふわっと表示
 .panel::before{
-    content:'background-image:url(images/mountain.jpg)';
-    position:absolute;inset:0;
+    content:'';
+    position:absolute;
     background-image:var(--bg);
     background-size:cover;
     background-position:center;
-    transform:scale(1.05);
-    opacity:0;
-    z-index:-1;
+    background:rgba(0,0,0,.4);     /* ← 色と透過率を調整 
+    backdrop-filter:blur(2px); 
 }
 
 /*
@@ -175,15 +173,15 @@ section p {
     opacity:1;
 }*/
   
-/* セクションごとの背景色（お好みで画像やグラデでもOK） ------ */
+/* セクションごとの背景色（お好みで画像やグラデでもOK） ------ 
 .about{
-    /*background:#4ab0c0;*/
+    /*background:#4ab0c0;
     background-image:url(images/mountain.jpg);
 }
   .works {background:#f5b946;}
   .skill {background:#7e9ab8;}
 
-/* 見出し & 本文 --------------------------------------------- */
+/* 見出し & 本文 --------------------------------------------- 
 .panel h2{
     font-size:clamp(2rem,6vw,3.5rem);
     margin-bottom:1rem;
@@ -194,7 +192,7 @@ section p {
     max-width:700px;
 }
   
-/* optional : スクロール連続感を滑らかに ----------------------- */
+/* optional : スクロール連続感を滑らかに ----------------------- 
 html{scroll-behavior:smooth;}
 
 .band{
@@ -207,7 +205,7 @@ html{scroll-behavior:smooth;}
     font-weight: 700;
     letter-spacing: .05em;
     cursor: pointer;
-    /* 背景色（ホバー前） */
+    /* 背景色（ホバー前） 
 }
 
 
@@ -228,37 +226,122 @@ html{scroll-behavior:smooth;}
     z-index:-1;          /* 文字より背面 
 }*/
 
-/* ▼ ★ 半透明オーバーレイ層 ★ ------------------------------- */
-.panel::after{
-    content:'';
-    position:absolute; inset:0;
-    background:rgba(0,0,0,.45);     /* ← 色と透過率を調整 */
-    backdrop-filter:blur(2px);      /* ぼかしを入れると更に読みやすい。不要なら削除 */
-    opacity:0;                      /* アニメ前は非表示 */
-    transition:opacity 1.6s ease;
-    z-index:-1;                     /* 写真より前・テキストより後ろ */
-}
-
-/* ▼ スクロールで背景がフェードインしたタイミングで
-      オーバーレイも同時に表示する例 ----------------------- */
-.panel.inview::after{
-    opacity:1;
-}
-
-/* 季節ごとの画像 URL を指定 */
+/* 季節ごとの画像 URL を指定 
 .spring::after{ background-image:url(images/spring.jpg); }
 .summer::after{ background-image:url(images/summer.jpg); }
 .autumn::after{ background-image:url(images/autumn.jpg); }
 .winter::after{ background-image:url(images/winter.jpg); }
 
-/* ホバーで写真フェードイン + 文字をわずかに浮かせる */
+/* ホバーで写真フェードイン + 文字をわずかに浮かせる 
 .band:hover::after{
   opacity:1;
 }
 .band:hover{
-  transform: translateZ(0);         /* Safari GPU バグ対策 */
+  transform: translateZ(0);         /* Safari GPU バグ対策 
 }
 .band:hover h2{
   transform: translateY(-4px);
   transition: transform var(--duration) ease;
 }
+*/
+
+/* ── 共通設定 ─────────────────────── */
+*{box-sizing:border-box;margin:0}
+body{
+  font-family:Helvetica, 游ゴシック, "Yu Gothic", YuGothic, HiraKakuProN-W3, メイリオ, Meiryo, sans-serif;
+  line-height:1.6;
+  color:#fff;
+}
+.header{
+  background:#e5a5db;
+  height:90px;
+  padding:20px 0;
+  width: 100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.s_title {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.fixed-nav{
+    position:fixed;
+    top:90px;
+    left:0;
+    width:100%;
+    background:rgba(0,0,0,.6);
+    z-index:999;
+}
+
+.fixed-nav ul{
+    display:flex;
+    gap:2rem;
+    justify-content:center;
+    padding:0.5rem 0;
+}
+
+.fixed-nav a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:600
+}
+
+/* ── パネル（About / Works / Skill）──────────────── */
+.panel{
+  position:relative;                 /* ← 疑似要素の基準 */
+  width:100%; min-height:100vh;
+  padding:4rem 8vw;
+  display:flex;flex-direction:column;
+  justify-content:center;align-items:center;
+  text-align:center;
+  overflow:hidden;                   /* 背景はみ出し防止 */
+}
+
+/* 背景写真層  -------------------------------------------------- */
+.panel::before{
+  content:'';
+  position:absolute; inset:0;
+  background-image:var(--bg);        /* 各セクションで上書き */
+  background-size:cover;
+  background-position:center;
+  z-index:-2;                        /* 最背面 */
+}
+
+/* 半透明オーバーレイ層  --------------------------------------- */
+.panel::after{
+  content:'';
+  position:absolute; inset:0;
+  background:rgba(0,0,0,.45);        /* ← 好みで色・濃さ変更 */
+  /* backdrop-filter:blur(2px); */   /* ぼかし要らなければ削除 */
+  z-index:-1;                        /* 写真より前・文字より後ろ */
+}
+
+/* 見出し・タイトル ----------------------------------- */
+.panel h2{
+  font-size:clamp(2rem,6vw,3.5rem);
+  margin-bottom:1rem;letter-spacing:.08em;
+  position:relative; z-index:1;      /* 念のため最前面 */
+}
+.panel p{
+  /*font-size:clamp(1rem,3.2vw,1.5rem);*/
+  font-size:18px;
+  max-width:700px;
+  position:relative; z-index:1;
+}
+
+/* パネル内文章 ----------------------------------- */
+div.sec-par{
+    margin: 20px 0;
+}
+
+div.sec-par p{
+    font-size: 16px;
+}
+
+/* ── 各セクションごとの背景写真を CSS 変数で指定 ─────────── */
+.about{--bg:url(images/mountain.jpg);}
+.works{--bg:url(images/works.jpg);}
+.skill{--bg:url(images/skill.jpg);}
