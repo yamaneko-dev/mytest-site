@@ -152,10 +152,34 @@ section p {
     align-items:center;        /* 横中央寄せ */
     padding:4rem 8vw;
     text-align:center;
-  }
+    position:relative; /* 追加 */
+    overflow:hidden; /* 追加 */
+
+}
+
+/*ふわっと表示*/
+.panel::before{
+    content:'';
+    position:absolute;inset:0;
+    background-image:var(--bg);
+    background-size:cover;
+    background-position:center;
+    transform:scale(1.05);
+    opacity:0;
+    transition:transform 1.6s ease,opacity 1.6s ease;
+    z-index:-1;
+}
+
+.panel.inview::before{
+    transform:scale(1);
+    opacity:1;
+}
   
-  /* セクションごとの背景色（お好みで画像やグラデでもOK） ------ */
-  .about {background:#4ab0c0;}
+/* セクションごとの背景色（お好みで画像やグラデでもOK） ------ */
+.about{
+    /*background:#4ab0c0;*/
+    background-image:url(images/mountain.jpg);
+}
   .works {background:#f5b946;}
   .skill {background:#7e9ab8;}
 
