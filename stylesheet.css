@@ -357,34 +357,34 @@ body{
 
 /* Workパネル ----------------------------------- */
 .work-card{
-    text-align:center;
-    max-width: 480px;       /* お好みで */
+    text-align: center;
+    max-width: 480px;
     margin: 0 auto;
   }
   
   /* 見出し & 備考 */
   .work-head,
   .work-note{
-    color:#fff;             /* 背景が暗い場合用。調整してください */
+    color:#fff;
     margin: .5rem 0 1rem;
   }
   
   /* ===== 画像アニメーション部分 ===== */
   .work-link{
-    display:block;
-    overflow:hidden;        /* 拡大時にはみ出す画像を隠す */
-    border-radius:12px;     /* 角丸（お好みで） */
+    display: block;
+    overflow: hidden; 
+    border-radius: 12px;
   }
   
   .work-link img{
-    width:100%;             /* 横幅いっぱいに */
-    transition: transform 0.8s ease;  /* ←ふわっと動かす */
+    width: 100%;
+    border-radius: inherit;
+    transition: transform 0.8s ease;
   }
   
   /* ── ホバー時の動き ────────────────── */
   .work-link:hover img{
     transform: scale(1.05) translateY(-6px);
-    /* scale: 拡大率　translateY: 上方向にズラす量 */
   }
 
 /* ── 各セクションごとの背景写真を CSS 変数で指定 ─────────── */
