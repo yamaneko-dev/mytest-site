@@ -164,14 +164,14 @@ section p {
     background-image:var(--bg);
     background-size:cover;
     background-position:center;
-    transform:scale(1.05);
+    transform:scale(1.4);
     opacity:0;
     transition:transform 1.6s ease,opacity 1.6s ease;
     z-index:-1;
 }
 
 .panel.inview::before{
-    transform:scale(1);
+    transform:scale(1.5);
     opacity:1;
 }
   
